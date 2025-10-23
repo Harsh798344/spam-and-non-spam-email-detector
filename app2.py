@@ -7,6 +7,9 @@ from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 import sklearn
 
+# ✅ Add these lines right after importing nltk
+nltk.download('punkt')
+nltk.download('stopwords')
 def transform_text(text):
     text = text.lower()
     text = nltk.word_tokenize(text)
